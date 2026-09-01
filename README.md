@@ -1,6 +1,6 @@
 # Portfolio — Marguerite El Mbimbey
 
-Portfolio personnel en React + TypeScript + Tailwind CSS + Framer Motion, dans le style "Data/IA" avec animations et fond de code défilant.
+Portfolio personnel en React + TypeScript + Tailwind CSS + Framer Motion avec animations et fond de code défilant.
 
 ## Développement local
 
