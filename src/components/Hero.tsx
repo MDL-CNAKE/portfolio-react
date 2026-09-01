@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
-import { Github, Linkedin, ArrowDown } from "lucide-react";
+﻿import { motion } from "framer-motion";
+import { ArrowDown } from "lucide-react";
+import { Github, Linkedin } from "./BrandIcons";
 import CodeRain from "./CodeRain";
 import { profile, stats } from "../data";
 
@@ -51,13 +52,13 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.4 }}
           className="flex flex-wrap gap-4 mb-16"
         >
-          <a
+          
             href="#projects"
             className="px-6 py-3 bg-accent text-ink font-semibold rounded-lg hover:bg-accent/90 transition-colors"
           >
             Voir les projets
           </a>
-          <a
+          
             href={profile.github}
             target="_blank"
             rel="noreferrer"
@@ -65,7 +66,7 @@ export default function Hero() {
           >
             <Github size={18} /> GitHub
           </a>
-          <a
+          
             href="#contact"
             className="px-6 py-3 border border-white/15 rounded-lg flex items-center gap-2 hover:border-accent/60 hover:text-accent transition-colors"
           >

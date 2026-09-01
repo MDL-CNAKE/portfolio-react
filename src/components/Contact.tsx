@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
-import { Mail, Linkedin, Github, Phone } from "lucide-react";
+﻿import { motion } from "framer-motion";
+import { Mail, Phone } from "lucide-react";
+import { Linkedin, Github } from "./BrandIcons";
 import { profile } from "../data";
 
 export default function Contact() {
@@ -20,13 +21,13 @@ export default function Contact() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-10">
-            <a
+            
               href={`mailto:${profile.email}`}
               className="px-5 py-3 bg-accent text-ink font-semibold rounded-lg flex items-center gap-2 hover:bg-accent/90 transition-colors"
             >
               <Mail size={18} /> {profile.email}
             </a>
-            <a
+            
               href={profile.linkedin}
               target="_blank"
               rel="noreferrer"
@@ -34,7 +35,7 @@ export default function Contact() {
             >
               <Linkedin size={18} /> LinkedIn
             </a>
-            <a
+            
               href={profile.github}
               target="_blank"
               rel="noreferrer"
