@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
-import { projects } from "../data";
+import { useLanguage } from "../i18n";
 
 export default function Projects() {
+  const { t } = useLanguage();
   return (
     <section id="projects" className="py-24 border-t border-white/5">
       <div className="max-w-6xl mx-auto px-6">
@@ -13,16 +14,13 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="mb-14"
         >
-          <p className="font-mono text-accent text-sm tracking-[0.3em] mb-4">PROJETS</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ce que j'ai construit</h2>
-          <p className="text-gray-400 max-w-2xl">
-            Du dashboard IA à l'expérimentation RAG — chaque projet documenté avec ses limites, pas
-            seulement ses résultats.
-          </p>
+          <p className="font-mono text-accent text-sm tracking-[0.3em] mb-4">{t.projectsSection.kicker}</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.projectsSection.title}</h2>
+          <p className="text-gray-400 max-w-2xl">{t.projectsSection.paragraph}</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6">
-          {projects.map((p, idx) => (
+          {t.projects.map((p, idx) => (
             <motion.div
               key={p.title}
               initial={{ opacity: 0, y: 24 }}
@@ -35,7 +33,7 @@ export default function Projects() {
             >
               {p.featured && (
                 <span className="absolute -top-3 left-6 text-[10px] font-mono px-2 py-1 rounded-full bg-accent text-ink font-bold tracking-wide">
-                  ★ PROJET PHARE
+                  {t.projectsSection.featuredBadge}
                 </span>
               )}
               <span className="font-mono text-[11px] text-accent2 tracking-wider mb-3">{p.status}</span>
@@ -70,7 +68,7 @@ export default function Projects() {
                   rel="noreferrer"
                   className="inline-flex items-center gap-1.5 text-sm text-accent hover:underline mt-auto"
                 >
-                  GitHub <ExternalLink size={14} />
+                  {t.projectsSection.githubLabel} <ExternalLink size={14} />
                 </a>
               )}
             </motion.div>
