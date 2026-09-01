@@ -1,24 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { Github, Linkedin } from "./BrandIcons";
-import CodeRain from "./CodeRain";
-import { profile, stats } from "../data";
-
-export default function Hero() {
-  return (
-    <section id="top" className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-24">
-      <CodeRain />
-
-      <div className="relative z-10 max-w-6xl mx-auto px-6 w-full">
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="font-mono text-accent text-sm tracking-[0.3em] mb-6"
-        >
-          DATA IA BUSIimport { motion } from "framer-motion";
-import { ArrowDown } from "lucide-react";
-import { Github, Linkedin } from "./BrandIcons";
 import { profile, useLanguage } from "../i18n";
 
 export default function Hero() {
