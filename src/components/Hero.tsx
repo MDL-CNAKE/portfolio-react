@@ -16,7 +16,23 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="font-mono text-accent text-sm tracking-[0.3em] mb-6"
         >
-          DATA IA BUSINESS INTELLIGENCE
+          DATA IA BUSIimport { motion } from "framer-motion";
+import { ArrowDown } from "lucide-react";
+import { Github, Linkedin } from "./BrandIcons";
+import { profile, useLanguage } from "../i18n";
+
+export default function Hero() {
+  const { t } = useLanguage();
+  return (
+    <section id="top" className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-24">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 w-full">
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="font-mono text-accent text-sm tracking-[0.3em] mb-6"
+        >
+          {t.hero.kicker}
         </motion.p>
 
         <motion.h1
@@ -34,7 +50,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="text-lg md:text-xl text-gray-300 max-w-2xl mb-2"
         >
-          {profile.subtitle}
+          {t.hero.subtitle}
         </motion.p>
 
         <motion.p
@@ -43,7 +59,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="text-base md:text-lg text-gray-400 max-w-2xl mb-10 leading-relaxed"
         >
-          {profile.intro}
+          {t.hero.intro}
         </motion.p>
 
         <motion.div
@@ -53,13 +69,13 @@ export default function Hero() {
           className="flex flex-wrap gap-4 mb-16"
         >
           <a href="#projects" className="px-6 py-3 bg-accent text-ink font-semibold rounded-lg hover:bg-accent/90 transition-colors">
-            Voir les projets
+            {t.hero.ctaProjects}
           </a>
           <a href={profile.github} target="_blank" rel="noreferrer" className="px-6 py-3 border border-white/15 rounded-lg flex items-center gap-2 hover:border-accent/60 hover:text-accent transition-colors">
-            <Github size={18} /> GitHub
+            <Github size={18} /> {t.hero.ctaGithub}
           </a>
           <a href="#contact" className="px-6 py-3 border border-white/15 rounded-lg flex items-center gap-2 hover:border-accent/60 hover:text-accent transition-colors">
-            <Linkedin size={18} /> Me contacter
+            <Linkedin size={18} /> {t.hero.ctaContact}
           </a>
         </motion.div>
 
@@ -69,7 +85,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.5 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-white/10 pt-8"
         >
-          {stats.map((s) => (
+          {t.stats.map((s) => (
             <div key={s.label}>
               <div className="text-3xl md:text-4xl font-bold text-accent font-mono">{s.value}</div>
               <div className="text-xs text-gray-400 tracking-wide mt-1">{s.label}</div>
