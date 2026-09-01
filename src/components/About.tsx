@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { skillGroups } from "../data";
+import { useLanguage } from "../i18n";
 
 export default function About() {
+  const { t } = useLanguage();
   return (
     <section id="about" className="py-24 border-t border-white/5">
       <div className="max-w-6xl mx-auto px-6">
@@ -11,18 +12,13 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="font-mono text-accent text-sm tracking-[0.3em] mb-4">PROFIL & COMPÉTENCES</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Un parcours atypique, une exigence constante</h2>
-          <p className="text-gray-400 max-w-3xl leading-relaxed mb-16">
-            Après plus de 10 ans d'expérience en gestion opérationnelle et management d'équipe dans
-            l'hôtellerie, j'ai choisi de me reconvertir dans l'IT. Actuellement étudiante en Business
-            Intelligence Software Developer à l'ITS Academy ICT Piemonte de Turin, je répartis volontairement
-            mes compétences entre données/BI, développement, IA générative et cloud.
-          </p>
+          <p className="font-mono text-accent text-sm tracking-[0.3em] mb-4">{t.about.kicker}</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">{t.about.title}</h2>
+          <p className="text-gray-400 max-w-3xl leading-relaxed mb-16">{t.about.paragraph}</p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {skillGroups.map((group, idx) => (
+          {t.skillGroups.map((group, idx) => (
             <motion.div
               key={group.title}
               initial={{ opacity: 0, y: 20 }}
