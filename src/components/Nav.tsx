@@ -1,20 +1,28 @@
 import { useEffect, useState } from "react";
+import { useLanguage, type Lang } from "../i18n";
 
-const links = [
-  { href: "#about", label: "À propos" },
-  { href: "#projects", label: "Projets" },
-  { href: "#path", label: "Parcours" },
-  { href: "#contact", label: "Contact" },
+const langs: { code: Lang; label: string }[] = [
+  { code: "fr", label: "FR" },
+  { code: "it", label: "IT" },
+  { code: "en", label: "EN" },
 ];
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  const { lang, setLang, t } = useLanguage();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const links = [
+    { href: "#about", label: t.nav.about },
+    { href: "#projects", label: t.nav.projects },
+    { href: "#path", label: t.nav.path },
+    { href: "#contact", label: t.nav.contact },
+  ];
 
   return (
     <nav
@@ -26,12 +34,27 @@ export default function Nav() {
         <a href="#top" className="font-mono text-sm text-accent tracking-wider">
           M.EL_MBIMBEY
         </a>
-        <div className="hidden md:flex gap-8 text-sm text-gray-300">
-          {links.map((l) => (
-            <a key={l.href} href={l.href} className="hover:text-accent transition-colors">
-              {l.label}
-            </a>
-          ))}
+        <div className="flex items-center gap-6">
+          <div className="hidden md:flex gap-8 text-sm text-gray-300">
+            {links.map((l) => (
+              <a key={l.href} href={l.href} className="hover:text-accent transition-colors">
+                {l.label}
+              </a>
+            ))}
+          </div>
+          <div className="flex items-center gap-1 font-mono text-xs border border-white/10 rounded-full p-1">
+            {langs.map((l) => (
+              <button
+                key={l.code}
+                onClick={() => setLang(l.code)}
+                className={`px-2.5 py-1 rounded-full transition-colors ${
+                  lang === l.code ? "bg-accent text-ink font-bold" : "text-gray-400 hover:text-white"
+                }`}
+              >
+                {l.label}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </nav>
