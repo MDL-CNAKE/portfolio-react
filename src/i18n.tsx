@@ -53,106 +53,106 @@ export const profile = {
 
 const skillTags = {
   data: ["SQL", "PostgreSQL", "MySQL", "Flyway", "ETL", "Data modeling", "Data cleaning"],
-  bi: ["Metabase", "Streamlit", "KPI", "Analyse de marche", "Pricing & marges"],
+  bi: ["Metabase", "Streamlit", "KPI", "Analyse de marché", "Pricing & marges"],
   ai: ["RAG", "LLM", "Agents IA", "Prompt engineering", "LangChain", "LlamaIndex", "ChromaDB", "pgvector"],
-  ml: ["scikit-learn", "RandomForest", "Cross-validation", "Feature engineering", "Explicabilite"],
+  ml: ["scikit-learn", "RandomForest", "Cross-validation", "Feature engineering", "Explicabilité"],
   dev: ["Python", "Java Spring Boot", "FastAPI", "API REST", "React", "TypeScript"],
   cloud: ["AWS", "Azure", "Docker", "Docker Compose", "Git / GitHub", "GCP (notions)"],
 };
 
 export const content: Record<Lang, Content> = {
   fr: {
-    nav: { about: "A propos", projects: "Projets", path: "Parcours", contact: "Contact" },
+    nav: { about: "À propos", projects: "Projets", path: "Parcours", contact: "Contact" },
     hero: {
       kicker: "DATA . IA . BUSINESS INTELLIGENCE",
-      subtitle: "Etudiante ITS Academy . Turin",
+      subtitle: "Étudiante ITS Academy . Turin",
       intro:
-        "Du management operationnel a la Business Intelligence, en passant par l'intelligence artificielle generative. Je consolide mes competences en developpement, machine learning et IA, avec un interet marque pour le cloud et les web solutions.",
+        "Du management opérationnel à la Business Intelligence, en passant par l'intelligence artificielle générative. Je consolide mes compétences en développement, machine learning et IA, avec un intérêt marqué pour le cloud et les web solutions.",
       ctaProjects: "Voir les projets",
       ctaGithub: "GitHub",
       ctaContact: "Me contacter",
     },
     stats: [
-      { value: "4", label: "PROJETS PRESENTES" },
+      { value: "4", label: "PROJETS PRÉSENTÉS" },
       { value: "10+", label: "ANS EN MANAGEMENT" },
       { value: "1800h", label: "FORMATION ITS ACADEMY" },
-      { value: "3", label: "LANGUES PARLEES" },
+      { value: "3", label: "LANGUES PARLÉES" },
     ],
     about: {
-      kicker: "PROFIL & COMPETENCES",
+      kicker: "PROFIL & COMPÉTENCES",
       title: "Un parcours atypique, une exigence constante",
       paragraph:
-        "Apres plus de 10 ans d'experience en gestion operationnelle et management d'equipe dans l'hotellerie, j'ai choisi de me reconvertir dans l'IT. Actuellement etudiante en Business Intelligence Software Developer a l'ITS Academy ICT Piemonte de Turin, je repartis volontairement mes competences entre donnees/BI, developpement, IA generative et cloud.",
+        "Après plus de 10 ans d'expérience en gestion opérationnelle et management d'équipe dans l'hôtellerie, j'ai choisi de me reconvertir dans l'IT. Actuellement étudiante en Business Intelligence Software Developer à l'ITS Academy ICT Piemonte de Turin, je répartis volontairement mes compétences entre données/BI, développement, IA générative et cloud.",
     },
     skillGroups: [
-      { title: "Donnees & SQL", tags: skillTags.data },
+      { title: "Données & SQL", tags: skillTags.data },
       { title: "BI & Finance", tags: skillTags.bi },
-      { title: "IA Generative & Agents", tags: skillTags.ai },
+      { title: "IA Générative & Agents", tags: skillTags.ai },
       { title: "Machine Learning", tags: skillTags.ml },
-      { title: "Developpement & API", tags: skillTags.dev },
+      { title: "Développement & API", tags: skillTags.dev },
       { title: "Cloud & DevOps", tags: skillTags.cloud },
     ],
     projectsSection: {
       kicker: "PROJETS",
       title: "Ce que j'ai construit",
       paragraph:
-        "Du dashboard IA a l'experimentation RAG - chaque projet documente avec ses limites, pas seulement ses resultats.",
+        "Du dashboard IA à l'expérimentation RAG - chaque projet documenté avec ses limites, pas seulement ses résultats.",
       featuredBadge: "PROJET PHARE",
       githubLabel: "GitHub",
     },
     projects: [
       {
-        status: "EXPERIMENTATION",
+        status: "EXPÉRIMENTATION",
         featured: true,
         title: "Assistant RAG personnel",
-        subtitle: "Pipeline de Retrieval-Augmented Generation - experimentation en cours",
+        subtitle: "Pipeline de Retrieval-Augmented Generation - expérimentation en cours",
         description:
-          "Construction d'un pipeline RAG pour explorer comment un LLM peut repondre en s'appuyant sur une base documentaire personnalisee. Ingestion et decoupage de documents, comparaison ChromaDB / pgvector comme vector stores, orchestration de la recuperation avec LangChain et LlamaIndex, et prompt engineering pour reduire les hallucinations.",
+          "Construction d'un pipeline RAG pour explorer comment un LLM peut répondre en s'appuyant sur une base documentaire personnalisée. Ingestion et découpage de documents, comparaison ChromaDB / pgvector comme vector stores, orchestration de la récupération avec LangChain et LlamaIndex, et prompt engineering pour réduire les hallucinations.",
         metrics: [
-          { value: "2", label: "vector stores compares" },
-          { value: "2", label: "frameworks testes" },
+          { value: "2", label: "vector stores comparés" },
+          { value: "2", label: "frameworks testés" },
         ],
         tags: ["LangChain", "LlamaIndex", "ChromaDB", "pgvector", "RAG", "Prompt Engineering"],
       },
       {
-        status: "TERMINE",
+        status: "TERMINÉ",
         featured: true,
         title: "VirtualZ",
-        subtitle: "Plateforme de gestion de bibliotheque de jeux Steam - projet academique en equipe de 6",
+        subtitle: "Plateforme de gestion de bibliothèque de jeux Steam - projet académique en équipe de 6",
         description:
-          "Backend Java Spring Boot, frontend React/TypeScript, pipeline Python de nettoyage de donnees pour un dataset de plus de 122 000 jeux. 20 PRs mergees : architecture, cache Caffeine, migration TypeScript complete, i18n, CI/CD Docker.",
+          "Backend Java Spring Boot, frontend React/TypeScript, pipeline Python de nettoyage de données pour un dataset de plus de 122 000 jeux. 20 PRs mergées : architecture, cache Caffeine, migration TypeScript complète, i18n, CI/CD Docker.",
         metrics: [
-          { value: "6", label: "developpeurs" },
-          { value: "20", label: "PRs mergees" },
+          { value: "6", label: "développeurs" },
+          { value: "20", label: "PRs mergées" },
           { value: "122K+", label: "jeux dans le dataset" },
         ],
         tags: ["Java", "Spring Boot", "PostgreSQL", "React", "TypeScript", "Docker Compose"],
         link: "https://github.com/MDL-CNAKE",
       },
       {
-        status: "TERMINE",
+        status: "TERMINÉ",
         title: "CruScout",
         subtitle: "Tableau de bord IA pour petits producteurs de vin",
         description:
-          "Prediction de qualite par Machine Learning, sommelier virtuel avec RAG, API REST et base MySQL versionnee avec Flyway.",
+          "Prédiction de qualité par Machine Learning, sommelier virtuel avec RAG, API REST et base MySQL versionnée avec Flyway.",
         metrics: [
-          { value: "6 497", label: "vins analyses" },
-          { value: "0.40", label: "R2 (test, corrige)" },
+          { value: "6 497", label: "vins analysés" },
+          { value: "0.40", label: "R2 (test, corrigé)" },
           { value: "8", label: "migrations SQL" },
         ],
         tags: ["Python", "scikit-learn", "MySQL", "FastAPI", "React", "RAG", "LLM", "Docker"],
         link: "https://github.com/MDL-CNAKE",
       },
       {
-        status: "TERMINE",
-        title: "Opportunites Spiritueux Afrique",
-        subtitle: "Modelisation bottom-up du marche africain des spiritueux",
+        status: "TERMINÉ",
+        title: "Opportunités Spiritueux Afrique",
+        subtitle: "Modélisation bottom-up du marché africain des spiritueux",
         description:
-          "Modelisation a partir de donnees Banque mondiale et OMS (Diageo, Pernod Ricard, Campari, Bacardi), validee contre les comptes publies.",
+          "Modélisation à partir de données Banque mondiale et OMS (Diageo, Pernod Ricard, Campari, Bacardi), validée contre les comptes publiés.",
         metrics: [
-          { value: "4", label: "groupes analyses" },
-          { value: "+20%", label: "ecart vs. Diageo" },
-          { value: "5", label: "facteurs du modele" },
+          { value: "4", label: "groupes analysés" },
+          { value: "+20%", label: "écart vs. Diageo" },
+          { value: "5", label: "facteurs du modèle" },
         ],
         tags: ["Python", "Streamlit", "Data Analysis", "Market Modeling", "PDF Reporting"],
         link: "https://github.com/MDL-CNAKE",
@@ -161,14 +161,14 @@ export const content: Record<Lang, Content> = {
     timelineSection: {
       kicker: "FORMATION & PARCOURS",
       title: "Un parcours atypique",
-      paragraph: "Du management hotelier a la Business Intelligence, avec la meme exigence des deux cotes.",
+      paragraph: "Du management hôtelier à la Business Intelligence, avec la même exigence des deux côtés.",
     },
     timeline: [
       { kind: "FORMATION", period: "2025 - 2027", title: "Business Intelligence Software Developer", place: "ITS Academy ICT Piemonte, Turin - 1 800h", status: "EN COURS" },
-      { kind: "FORMATION", period: "2023 - 2024", title: "Bachelor Business Management", place: "AIVA, Strasbourg - Commerce International & Vins/Spiritueux", status: "TERMINE" },
-      { kind: "FORMATION", period: "2024 - 2025", title: "Formation Full Stack & Java", place: "ChallengeNetwork / Manpower", status: "TERMINE" },
-      { kind: "EXPERIENCE", period: "Maintenant", title: "Recherche de stage curriculaire", place: "Data (Engineering, Analyse, Science), BI ou IA - Italie & France", status: "EN COURS" },
-      { kind: "EXPERIENCE", period: "2012 - 2025", title: "Management operationnel", place: "Doppio Malto Group, Rocco Forte Hotels - 10+ ans, encadrement d'equipes jusqu'a 15 personnes", status: "TERMINE" },
+      { kind: "FORMATION", period: "2023 - 2024", title: "Bachelor Business Management", place: "AIVA, Strasbourg - Commerce International & Vins/Spiritueux", status: "TERMINÉ" },
+      { kind: "FORMATION", period: "2024 - 2025", title: "Formation Full Stack & Java", place: "ChallengeNetwork / Manpower", status: "TERMINÉ" },
+      { kind: "EXPÉRIENCE", period: "Maintenant", title: "Recherche de stage curriculaire", place: "Data (Engineering, Analyse, Science), BI ou IA - Italie & France", status: "EN COURS" },
+      { kind: "EXPÉRIENCE", period: "2012 - 2025", title: "Management opérationnel", place: "Doppio Malto Group, Rocco Forte Hotels - 10+ ans, encadrement d'équipes jusqu'à 15 personnes", status: "TERMINÉ" },
     ],
     contact: {
       kicker: "TRAVAILLONS ENSEMBLE",
@@ -252,7 +252,7 @@ export const content: Record<Lang, Content> = {
         title: "CruScout",
         subtitle: "Dashboard IA per piccoli produttori di vino",
         description:
-          "Previsione della qualita tramite Machine Learning, sommelier virtuale con RAG, API REST e database MySQL versionato con Flyway.",
+          "Previsione della qualità tramite Machine Learning, sommelier virtuale con RAG, API REST e database MySQL versionato con Flyway.",
         metrics: [
           { value: "6 497", label: "vini analizzati" },
           { value: "0.40", label: "R2 (test, corretto)" },
@@ -263,7 +263,7 @@ export const content: Record<Lang, Content> = {
       },
       {
         status: "COMPLETATO",
-        title: "Opportunita Spirits Africa",
+        title: "Opportunità Spirits Africa",
         subtitle: "Modellazione bottom-up del mercato africano degli spiriti",
         description:
           "Modellazione basata su dati Banca Mondiale e OMS (Diageo, Pernod Ricard, Campari, Bacardi), validata rispetto ai bilanci pubblicati.",
