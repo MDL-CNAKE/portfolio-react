@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { timeline } from "../data";
+import { useLanguage } from "../i18n";
 
 export default function Timeline() {
+  const { t } = useLanguage();
   return (
     <section id="path" className="py-24 border-t border-white/5">
       <div className="max-w-6xl mx-auto px-6">
@@ -12,15 +13,13 @@ export default function Timeline() {
           transition={{ duration: 0.6 }}
           className="mb-14"
         >
-          <p className="font-mono text-accent text-sm tracking-[0.3em] mb-4">FORMATION & PARCOURS</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Un parcours atypique</h2>
-          <p className="text-gray-400 max-w-2xl">
-            Du management hôtelier à la Business Intelligence, avec la même exigence des deux côtés.
-          </p>
+          <p className="font-mono text-accent text-sm tracking-[0.3em] mb-4">{t.timelineSection.kicker}</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.timelineSection.title}</h2>
+          <p className="text-gray-400 max-w-2xl">{t.timelineSection.paragraph}</p>
         </motion.div>
 
         <div className="relative border-l border-white/10 ml-3">
-          {timeline.map((item, idx) => (
+          {t.timeline.map((item, idx) => (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, x: -20 }}
@@ -35,7 +34,7 @@ export default function Timeline() {
                 <span className="text-xs text-gray-500">{item.period}</span>
                 <span
                   className={`text-[10px] font-mono px-2 py-0.5 rounded-full ${
-                    item.status === "EN COURS"
+                    item.status === "EN COURS" || item.status === "IN CORSO" || item.status === "ONGOING"
                       ? "bg-accent/15 text-accent"
                       : "bg-white/5 text-gray-400"
                   }`}
