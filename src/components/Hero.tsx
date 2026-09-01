@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { Github, Linkedin } from "./BrandIcons";
 import CodeRain from "./CodeRain";
@@ -16,7 +16,7 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="font-mono text-accent text-sm tracking-[0.3em] mb-6"
         >
-          DATA · IA · BUSINESS INTELLIGENCE
+          DATA IA BUSINESS INTELLIGENCE
         </motion.p>
 
         <motion.h1
@@ -52,24 +52,13 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.4 }}
           className="flex flex-wrap gap-4 mb-16"
         >
-          
-            href="#projects"
-            className="px-6 py-3 bg-accent text-ink font-semibold rounded-lg hover:bg-accent/90 transition-colors"
-          >
+          <a href="#projects" className="px-6 py-3 bg-accent text-ink font-semibold rounded-lg hover:bg-accent/90 transition-colors">
             Voir les projets
           </a>
-          
-            href={profile.github}
-            target="_blank"
-            rel="noreferrer"
-            className="px-6 py-3 border border-white/15 rounded-lg flex items-center gap-2 hover:border-accent/60 hover:text-accent transition-colors"
-          >
+          <a href={profile.github} target="_blank" rel="noreferrer" className="px-6 py-3 border border-white/15 rounded-lg flex items-center gap-2 hover:border-accent/60 hover:text-accent transition-colors">
             <Github size={18} /> GitHub
           </a>
-          
-            href="#contact"
-            className="px-6 py-3 border border-white/15 rounded-lg flex items-center gap-2 hover:border-accent/60 hover:text-accent transition-colors"
-          >
+          <a href="#contact" className="px-6 py-3 border border-white/15 rounded-lg flex items-center gap-2 hover:border-accent/60 hover:text-accent transition-colors">
             <Linkedin size={18} /> Me contacter
           </a>
         </motion.div>
