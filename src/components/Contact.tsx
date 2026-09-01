@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Mail, Phone } from "lucide-react";
 import { Linkedin, Github } from "./BrandIcons";
 import { profile } from "../data";
@@ -21,26 +21,13 @@ export default function Contact() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-10">
-            
-              href={`mailto:${profile.email}`}
-              className="px-5 py-3 bg-accent text-ink font-semibold rounded-lg flex items-center gap-2 hover:bg-accent/90 transition-colors"
-            >
+            <a href={`mailto:${profile.email}`} className="px-5 py-3 bg-accent text-ink font-semibold rounded-lg flex items-center gap-2 hover:bg-accent/90 transition-colors">
               <Mail size={18} /> {profile.email}
             </a>
-            
-              href={profile.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              className="px-5 py-3 border border-white/15 rounded-lg flex items-center gap-2 hover:border-accent/60 hover:text-accent transition-colors"
-            >
+            <a href={profile.linkedin} target="_blank" rel="noreferrer" className="px-5 py-3 border border-white/15 rounded-lg flex items-center gap-2 hover:border-accent/60 hover:text-accent transition-colors">
               <Linkedin size={18} /> LinkedIn
             </a>
-            
-              href={profile.github}
-              target="_blank"
-              rel="noreferrer"
-              className="px-5 py-3 border border-white/15 rounded-lg flex items-center gap-2 hover:border-accent/60 hover:text-accent transition-colors"
-            >
+            <a href={profile.github} target="_blank" rel="noreferrer" className="px-5 py-3 border border-white/15 rounded-lg flex items-center gap-2 hover:border-accent/60 hover:text-accent transition-colors">
               <Github size={18} /> GitHub
             </a>
           </div>
